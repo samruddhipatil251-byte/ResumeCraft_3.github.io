@@ -1,0 +1,198 @@
+<DOCTYPE html>
+<html>
+<head>
+<title>Contact Us</title>
+
+<style>
+body {
+font-family: Arial, sans-serif;
+background:#1E90FF;
+margin: 0;
+padding: 0;
+text-align: center;
+}
+header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: #f4f8ff;  padding: 12px 20px;
+}
+
+.logo {
+font-weight: 700;
+font-size: 1.45rem;
+letter-spacing: 0.4px;
+background-clip: text;
+color: #0F172A;
+}
+
+nav {
+display: flex;
+gap: 32px;
+align-items: center;
+}
+
+nav a {
+text-decoration: none;
+padding: 8px 12px;
+border-radius: 10px;
+font-weight: 600;
+font-size: 0.95rem;
+transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+color: #0F172A;
+}
+
+nav a:hover {
+  background: #1C2635; 
+  box-shadow: 5px 5px 10px rgba(0,0,0,.25);
+  color: white;
+}
+
+h2 {
+color: #1E90FF; margin-top: 20px;
+}
+section {
+background: #ffffff;
+width: 60%;
+margin: 20px auto;
+padding: 25px;
+border-radius: 12px;
+border-top: 6px solid #1E90FF;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+p {
+ font-size: 16px;
+ color: #0A2A4A;
+  }
+
+.social b {
+color: #1E90FF;     }
+form {
+margin-top: 20px;
+width: 80%;
+text-align: left;
+margin-left: auto;
+margin-right: auto;
+}
+label {
+font-weight: bold;
+display: block;
+margin-bottom: 6px;
+color: #0F69CC;     }
+input, textarea {
+width: 100%;
+padding: 12px;
+margin-bottom: 18px;
+border: 1px solid #8CCBFF; 
+border-radius: 6px;
+font-size: 15px;
+background: #F2FFFF; 
+transition: 0.3s;
+    }
+
+input:focus, textarea:focus {
+border-color: #1E90FF;
+box-shadow: 0 0 8px rgba(30, 144, 255, 0.3);
+outline: none;
+  }
+
+textarea {
+height: 120px;
+resize: none;
+    }
+
+button {
+background: #1E90FF;color: white;
+border: none;
+padding: 14px 22px;
+font-size: 16px;
+border-radius: 6px;
+cursor: pointer;
+width: 100%;
+font-weight: bold;
+transition: 0.3s;
+}
+@media (max-width: 880px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .container h1 {
+    font-size: 1.45rem;
+  }
+
+  #uses > div {
+    flex-direction: column;
+  }
+
+  [id="about section"] {
+    padding: 28px;
+  }
+
+  .step-container {
+    flex-direction: column;
+  }
+}
+
+
+button:hover {
+background: #0F69CC; 
+    }
+
+</style>
+</head>
+
+<body>
+<header>
+<div class="logo">ResumeCraft</div>
+<nav>
+ <a href="Homepage.html">Home</a>
+ <a href="sdg.html">SDG</a>
+ <a href="buildyourresume.html">Build Your Resume</a>
+ <a href="preview.html">Preview</a>
+ <a href="contact.html">Contacts</a>
+
+</nav>
+
+</header>
+
+<h2>Contact Us</h2>
+
+<section>
+<p>
+<b>Email:</b> resumecraft12@gmail.com <br>
+<b>Phone:</b> 9110160123
+</p>
+
+<h2>Follow Us</h2>
+<p class="social">
+<b>Instagram:</b> @resumecraft_12<br>
+<b>Facebook:</b> @resumecraft_12<br>
+<b>Twitter:</b> @resumecraft_12<br>
+</p>
+</section>
+
+<section>
+<h2>Your Feedback</h2>
+
+<form onsubmit="return validateForm()" method="post">
+<label>Name:</label>
+<input type="text" name="fname" required>
+<label>Email:</label>
+<input type="email" name="email" required>
+<label>Message:</label>
+<textarea name="message" required></textarea>
+<button type="submit">Send Feedback</button>
+</form>
+
+</section>
+
+</body>
+</html>

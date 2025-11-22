@@ -1,0 +1,221 @@
+body {
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: #F5F7FA;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1E90FF;
+  padding: 12px 20px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.45rem;
+  letter-spacing: 0.4px;
+  background-clip: text;
+  color: #0F172A;
+}
+
+nav {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+  color: #0F172A;
+}
+
+nav a:hover {
+  background: #1C2635;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.25);
+  color: white;
+}
+
+[id="about section"] {
+  max-width: 1100px;
+  margin: 0 auto 28px auto;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 44px 28px;
+  box-shadow: 10px 10px 20px rgba(0,0,0,.25);
+}
+
+.container h1 {
+  font-size: 1.9rem;
+  color: #1C2635;
+  text-shadow: 2px 2px 5px rgba(0,0,0,.2);
+  margin-bottom: 12px;
+}
+
+.container p {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 18px;
+  text-shadow: 0 0 3px rgba(0,0,0,.1);
+}
+
+.cta {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 20px;
+  background: #00C4FF;
+  color: white;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: transform .14s ease, box-shadow .14s ease;
+}
+
+.cta:hover {
+  transform: translateY(5px);
+  box-shadow: 10px 10px 15px rgba(0,196,255,0.4);
+}
+
+#uses {
+  margin: 22px auto;
+  background: #F5F7FA;
+  padding: 10px;
+}
+
+#uses > div {
+  display: flex;
+  gap: 18px;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+#uses > div > div {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  flex: 1 1 0;
+  text-align: left;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.15);
+}
+
+#uses h3 {
+  margin-bottom: 6px;
+  color: #333;
+}
+
+#uses span {
+  display: block;
+  color: #1E90FF;
+  font-size: 20px;
+  text-shadow: 0 0 1px #00C4FF;
+}
+
+
+#steps {
+  padding: 50px 20px;
+  background: #ffffff;
+  border-radius: 20px;
+  max-width: 1150px;
+  margin: 40px auto;
+  box-shadow: 10px 10px 20px rgba(0,0,0,.20);
+}
+
+#steps h2 {
+  font-size: 28px;
+  color: #1C2635;
+  font-weight: 700;
+  margin-bottom: 35px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,.2);
+}
+
+.step-container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.step-box {
+  flex: 1 1 220px;
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 5px 5px 12px rgba(0,0,0,.15);
+  transition: 0.3s ease;
+}
+
+.step-box h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #1C2635;
+}
+
+.step-box p {
+  color: #555;
+}
+
+.step-box:hover {
+  transform: translateY(-8px);
+  border-color: #1E90FF;
+  box-shadow: 8px 8px 15px rgba(0,0,0,.18);
+}
+
+#steps .cta {
+  margin-top: 30px;
+}
+
+
+footer {
+  background-color: #1C2635;
+  color: white;
+  font-family: courier new, monospace;
+  padding: 20px;
+}
+
+@media (max-width: 880px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .container h1 {
+    font-size: 1.45rem;
+  }
+
+  #uses > div {
+    flex-direction: column;
+  }
+
+  [id="about section"] {
+    padding: 28px;
+  }
+
+  .step-container {
+    flex-direction: column;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  nav, .cta {
+    display: none;
+  }
+}

@@ -1,0 +1,132 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Build Your Resume</title>
+<link rel="stylesheet" href="style1.css">
+<style>
+form {
+width: 60%;
+margin: auto;
+background: #f8f8f8;
+padding: 30px;
+border-radius: 10px;
+font-family: Arial, sans-serif;
+}
+input, textarea, select {
+width: 100%;
+padding: 10px;
+margin-top: 8px;
+margin-bottom: 18px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+label {
+font-weight: bold;
+}
+button {
+padding: 12px 20px;
+background: #007bff;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+button:hover {
+ background: #0056c1;
+}
+h2 {
+text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo" align="center">ResumeCraft</div>
+<nav>
+<a href="Homepage.html">Home</a>
+<a href="sdg.html">SDG</a>
+<a href="buildyourresume.html">Build Your Resume</a>
+<a href="preview.html">Preview</a>
+<a href="contact.html">Contacts</a>
+</nav>
+</header>
+
+<br><br>
+
+<h2>Fill Your Resume Details</h2>
+
+<form action="preview.html" method="GET">
+
+<h3>Personal Information</h3>
+
+<label>Full Name</label>
+<input type="text" name="fullname" placeholder="Enter your full name" required>
+
+<label>Email</label>
+<input type="email" name="email" placeholder="Enter your email" required>
+
+<label>Phone Number</label>
+<input type="text" name="phone" placeholder="Enter your phone number" required>
+
+<label>Address</label>
+<textarea name="address" placeholder="Enter your address"></textarea>
+
+<label>Professional Summary</label>
+<textarea name="summary" placeholder="Write a short summary about yourself"></textarea>
+
+
+<h3>Education</h3>
+
+<label>Degree</label>
+<input type="text" name="degree" placeholder="e.g. B.Sc in Computer Science">
+
+<label>Institution</label>
+<input type="text" name="institution" placeholder="e.g. University Name">
+
+<label>Year of Passing</label>
+<input type="text" name="passing_year" placeholder="e.g. 2024">
+
+
+<h3>Work Experience</h3>
+
+<label>Job Title</label>
+<input type="text" name="job_title" placeholder="e.g. Software Engineer">
+
+<label>Company Name</label>
+<input type="text" name="company" placeholder="e.g. ABC Pvt Ltd">
+
+<label>Duration</label>
+<input type="text" name="duration" placeholder="e.g. 2021 - Present">
+
+<label>Description</label>
+<textarea name="job_description" placeholder="Describe your role and responsibilities"></textarea>
+
+
+<h3>Skills</h3>
+<textarea name="skills" placeholder="List your skills separated by commas"></textarea>
+
+
+<h3>Projects</h3>
+
+<label>Project Title</label>
+<input type="text" name="project_title" placeholder="e.g. Portfolio Website">
+
+<label>Project Description</label>
+<textarea name="project_description" placeholder="Describe your project"></textarea>
+
+
+<button type="submit">Preview My Resume</button>
+
+</form>
+
+<br><br>
+
+<footer>
+<p>All Rights Reserved @ResumeCraft</p>
+</footer>
+
+</body>
+</html>

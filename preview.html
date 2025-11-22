@@ -1,0 +1,181 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+<title>Resume Preview</title>
+
+<style>
+body {
+background: #f4f8ff;
+font-family: Arial, Helvetica, sans-serif;
+margin: 0;
+}
+header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: #1E90FF; 
+padding: 12px 20px;
+}
+
+.logo {
+font-weight: 700;
+font-size: 1.45rem;
+letter-spacing: 0.4px;
+background-clip: text;
+color: #0F172A;}
+
+
+nav {
+display: flex;
+gap: 32px;
+align-items: center;
+}
+
+nav a {
+text-decoration: none;
+padding: 8px 12px;
+border-radius: 10px;
+font-weight: 600;
+font-size: 0.95rem;
+transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+color: #0F172A;
+}
+
+nav a:hover {
+background: #1C2635; /* Slate Navy */
+box-shadow: 5px 5px 10px rgba(0,0,0,.25);
+color: white;
+}
+
+.preview-container {
+width: 80%;
+max-width: 900px;
+margin: 50px auto;
+text-align: center;
+}
+
+.resume-box {
+background: white;
+padding: 40px;
+margin-top: 30px;
+border-left: 6px solid dodgerblue;
+box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
+text-align: left;
+border-radius: 4px;
+}
+@media print {
+button, nav, header, footer {
+display: none !important;
+}
+body {
+background: white !important;
+margin: 0;
+padding: 0;
+}
+#resume-output {
+width: 100%;
+margin: 0;
+}
+} 
+@media (max-width: 880px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+
+
+footer {
+margin-top: 50px;
+padding: 15px;
+background: dodgerblue;
+color: white;
+text-align: center;
+}
+.btn {
+display: inline-block;
+padding: 10px 20px;
+margin: 10px 8px;
+background: #1E90FF;
+color: white;
+font-size: 1rem;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+text-decoration: none;
+font-weight: 600;
+transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+background: #006fe0;
+transform: translateY(-2px);
+box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);
+}
+
+.btn:active {
+transform: translateY(0px);
+box-shadow: none;
+}
+
+</style>
+</head>
+<body>
+<header>
+<div class="logo">ResumeCraft</div>
+<nav>
+<a href="Homepage.html">Home</a>
+<a href="sdg.html">SDG</a>
+<a href="buildyourresume.html">Build Your Resume</a>
+<a href="preview.html">Preview</a>
+<a href="contact.html">Contacts</a>
+
+</nav>
+
+</header>
+
+<section class="preview-container">
+<h1>Your Resume Preview</h1>
+<div class="resume-box" id="resume-output">
+</div>
+<div>
+<a href="buildyourresume.html" class="btn">Edit</a>
+<button onclick="window.print()" class="btn">Download PDF</button>
+</div>
+</section>
+<footer>
+<p>All Rights Reserved © ResumeCraft</p>
+</footer>
+
+<script>
+const query = new URLSearchParams(window.location.search);
+document.getElementById("resume-output").innerHTML = `
+<h2>${query.get("fullname") || ""}</h2>
+<p><strong>Email:</strong> ${query.get("email") || ""}</p>
+<p><strong>Phone:</strong> ${query.get("phone") || ""}</p>
+<p><strong>Address:</strong> ${query.get("address") || ""}</p><br>
+<h3>Professional Summary</h3>
+<p>${query.get("summary") || ""}</p><br>
+<h3>Education</h3>
+<p><strong>Degree:</strong> ${query.get("degree") || ""}</p>
+<p><strong>Institution:</strong> ${query.get("institution") || ""}</p>
+<p><strong>Year of Passing:</strong> ${query.get("passing_year") || ""}</p><br>
+
+<h3>Work Experience</h3>
+<p><strong>Job Title:</strong> ${query.get("job_title") || ""}</p>
+<p><strong>Company:</strong> ${query.get("company") || ""}</p>
+<p><strong>Duration:</strong> ${query.get("duration") || ""}</p>
+<p>${query.get("job_description") || ""}</p><br>
+
+<h3>Skills</h3>
+<p>${query.get("skills") || ""}</p><br>
+
+<h3>Projects</h3>
+<p><strong>${query.get("project_title") || ""}</strong></p>
+<p>${query.get("project_description") || ""}</p>
+`;
+</script>
+
+</body>
+</html>
